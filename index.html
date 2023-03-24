@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Oxygen:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form class="form" id="form">
+            <!-- <div class="form--message form--message-error">Incorrect Username or Password.</div> -->
+            <div class="form--input">
+                <i><ion-icon name="person"></ion-icon></i>
+                <input type="text" class="form--input-username" id="username" placeholder="Username">
+                <i><ion-icon name="lock-closed"></ion-icon></i>
+                <input type="password" class="form--input-password" id="password" placeholder="Password">
+            </div>
+            <button type="submit" class="form--submit">Login</button>
+        </form>
+    </div>
+    <script src="main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
