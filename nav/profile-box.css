@@ -1,0 +1,140 @@
+.account-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    height: 75vh;
+    width: 75vw;
+    margin: auto;
+
+    grid-area: content;
+
+    background-color: rgba(245, 245, 220, 0.5);
+    border-radius: 25px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, .5);
+
+    color: slateblue;
+}
+
+.account-tabs {
+    position: absolute;
+    display: flex;
+    
+    height: 75vh;
+    width: 15vw;
+    margin-right: 60vw;
+
+    border-radius: 25px 0 0 25px;
+}
+
+.account-button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 15vh;
+    width: 15vw;
+
+    /* background-color: rgb(245, 245, 220, 1); */
+    border-bottom: solid 1px beige;
+    color: beige;
+    font: 500 1rem 'Merriweather', serif;
+
+    animation-duration: 0.2s;
+}
+
+.account-button i {
+    position: absolute;
+    font-size: 1.5rem;
+    left: 2vw;
+    top: 5.5vh;
+}
+
+.account-button--profile {
+    border-radius: 25px 0 0 0;
+}
+
+.account-button--security {
+    top: 15vh;
+}
+
+.account-button.active {
+    background-color: beige;
+    color: slateblue;
+    animation-duration: 0.2s;
+}
+
+.account-button.active:hover {
+    background: rgb(245, 245, 220, 0.8);
+}
+
+.account-button.inactive {
+    color: beige;
+    animation-duration: 0.2s;
+}
+
+.account-button.inactive:hover{
+    background-color: rgb(245, 245, 220, 0.2);
+}
+
+.account-details {  
+    position: relative;
+
+    height: 75vh;
+    width: 60vw;
+    
+    background-color: beige;
+    border-radius: 0 25px 25px 0;
+}
+
+.account-details .active {
+    display: grid;
+    padding: 2vw 2vw 2vw 2vw;
+    grid-template-areas:
+    'icon template1 details1'
+    'line line line'
+    'template2 details2 details2';
+    font: 500 1.5rem 'Merriweather', serif;
+}
+
+.account-details .inactive {
+    display: none;
+}
+
+.details i {
+    grid-area: icon;
+    font-size: 10rem;
+}
+
+.details #template1 {
+    grid-area: template1;
+    padding: 2.5vh 0 0 2vw;
+}
+
+.details #template-details1 {
+    grid-area: details1;
+    padding: 2.5vh 0 0 2vw;
+}
+
+.details #line-break {
+    grid-area: line;
+    width: 56vw;
+    height: 1vh;
+    margin-top: -2vw;
+    background-color: slateblue;
+}
+
+.details div~p {
+    font: 500 1rem 'Merriweather', serif;
+}
+
+.details #template2 {
+    grid-area: template2;
+    padding: 0 0 0 1vw;
+}
+
+.details #template-details2 {
+    grid-area: details2;
+    padding: 0 1vw 0 0;
+}

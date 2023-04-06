@@ -1,12 +1,18 @@
 * {
     margin: 0;
     padding: 0;
-    font: 500 1rem 'Oxygen', serif;
     text-decoration: none;
 }
 
 body {
-    background-color: slateblue;
+    display: grid;
+    grid-template-areas:
+    'header header header'
+    'left content right';
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 100px;
+
+    background-color: darkslateblue;
     background-image: url(assets/wallpaperflare.com_wallpaper.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -16,22 +22,23 @@ header {
     background-color: rgba(34, 29, 66, 0.5);
     backdrop-filter: blur(50px);
 
-    display: grid;
-    grid-template-columns: 2fr 4fr 1fr;
-    gap: 0 50px;
+    display: flex;
     position: fixed;
+    grid-area: header;
 
     align-items: center;
     justify-content: space-between;
     width: 100%;
+
+    font: 500 1rem 'Oxygen', serif;
 }
 
 header a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
-    height: 50px;
+    width: 15vw;
+    height: 8vh;
 
     color: white;
     border-top: solid 3px rgba(34, 29, 66, 0);
@@ -41,45 +48,6 @@ header a {
 
 header a:hover {
     border-bottom: solid 3px beige;
-}
-
-.search-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-
-    padding: 0 25px;
-
-    width: 300px;
-    height: 25px;
-    
-    color: beige;
-    background-color: rgba(71, 61, 138, 0.5);
-    border-radius: 100px;
-}
-
-.search-input {
-    width: inherit;
-
-    background: none;
-    border: none;
-    
-    color: beige;
-}
-
-::placeholder {
-    color: rgb(124, 114, 192);
-    opacity: 0.5;
-}
-
-.search-input:focus {
-    outline: none;
-    caret-color: beige;
-}
-
-.search-submit {
-    background: none;
-    border: none;
 }
 
 ul {
