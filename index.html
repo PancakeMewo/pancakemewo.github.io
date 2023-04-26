@@ -4,28 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Oxygen:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="login.css">
-    <title>Login</title>
+    <title>To Nisrina</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Login</h1>
-        <form class="form" id="form">
-            <!-- <div class="form--message form--message-error">Incorrect Username or Password.</div> -->
-            <div class="form--input">
-                <i><ion-icon name="person"></ion-icon></i>
-                <input type="text" class="form--input-username" id="username" placeholder="Codename">
-                <i><ion-icon name="lock-closed"></ion-icon></i>
-                <input type="password" class="form--input-password" id="password" placeholder="Password">
-            </div>
-            <button type="submit" class="form--submit">Login</button>
-        </form>
+        <div class="envelope-wrapper">
+            <div class="envelope"></div>
+        </div>
     </div>
-    <script src="main.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <div class="filter"></div>
+    <div class="letter-content">
+        <div class="text">
+            <strong>Dear Rina,</strong>
+            <p>
+                Halo Rina! How are you doing? It has been a while since the entire class met up after all. I'm doing just fine.
+            </p>
+            <p>
+                Hari ini kamu ulang tahun ke-17 kan ya?
+            </p>
+            <p>
+                ✨Happy Sweet Seventeen🎉 :D
+            </p>
+            <p>
+                I wish you all the best + everything well and I hope that this year you will be able to fulfill your goals!
+            </p>
+            <p>
+                Maaf ya aku gabisa ikut dateng, soalnya aku tadi ada saudara hehe. Anyway, happy birthday!
+            </p>
+            <p>
+                Best wishes,
+                Naufal
+            </p>
+        </div>
+        <img src="Venti 4.png" class="venti">
+        <img src="Hu Tao 2.png" class="hutao">
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        const bruh = document.querySelector('.filter');
+        const bruhe = document.querySelector('.letter-content');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+            bruh.classList.toggle('bruh');
+            bruhe.classList.toggle('bruh');
+        });
+    </script>
 </body>
 </html>

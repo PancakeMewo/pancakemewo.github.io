@@ -1,0 +1,102 @@
+:root{
+    --primary: #fff;
+    --bg-color: rgb(5, 53, 61);
+    --bg-envelope-color: #66b9ec;
+    --envelope-tab: #66b9ec;
+    --envelope-cover: #e6cfa7;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --txt-color: #444;
+    --text-font: 'Merriweather', serif;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: slateblue;
+    background-image: linear-gradient(to top left, slateblue, steelblue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  .container > .envelope-wrapper {
+    background: var(--bg-envelope-color);
+    box-shadow: 0 0 40px var(--shadow-color);
+  }
+  .envelope-wrapper > .envelope {
+    position: relative;
+    width: 300px;
+    height: 230px;
+  }
+  .envelope-wrapper > .envelope::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    border-top: 130px solid var(--envelope-tab);
+    border-right: 150px solid transparent;
+    border-left: 150px solid transparent;
+    transform-origin: top;
+    /* transition: all 0.5s ease-in-out 0.7s; */
+  }
+  .envelope-wrapper > .envelope::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 0px;
+    height: 0px;
+    border-top: 130px solid transparent;
+    border-right: 150px solid #c4dff0;
+    border-bottom: 100px solid #c4dff0;
+    border-left: 150px solid #a4d4f2;
+  }
+  .flap > .envelope:before {
+    transform: rotateX(180deg);
+    z-index: 0;
+  }
+  .filter {
+    display: none;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 245, 220, 0.1);
+    filter: blur(30px);
+    z-index: 499;
+  }
+  .letter-content {
+    display: none;
+    position: absolute;
+    align-items: center;
+    justify-content: right;
+    background-color: beige;
+    width: 65vw;
+    height: 80vh;
+    z-index: 500;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, .5);
+  }
+  .bruh {
+    display: flex;
+  }
+  .text {
+    padding: 5vw;
+    font: 500 1rem 'Merriweather', serif;
+    color: var(--txt-color);
+    text-align: left;
+  }
+  img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+  }
+  .venti {
+    bottom: 0;
+    right: 0;
+  }
+  .hutao {
+    top: 0;
+    left: 0;
+  }
