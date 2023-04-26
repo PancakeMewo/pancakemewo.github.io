@@ -97,9 +97,6 @@
     right: 0;
   }
   .hutao {
-    top: 0;
-    left: 0;
-  }
-  strong {
-      text-align: center !important;
+    top: -2vh;
+    left: -2vw;
   }
