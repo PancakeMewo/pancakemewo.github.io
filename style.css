@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0b1522;
+}
+
+.heart-button {
+    height: 3em;
+    width: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition-duration: 0.2s;
+}
+
+button {
+    height: inherit;
+    width: inherit;
+    background: transparent;
+    transition-duration: 0.2s;
+    border: none;
+}
+
+button p {
+    position: relative;
+    z-index: 1;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.heart-button:hover button::before {
+    transform: rotate(45deg) translate(2em, -1.05em);
+    box-shadow: -10px 0px 90px crimson;
+}
+
+.heart-button:hover button::after {
+    transform: rotate(-45deg) translate(-2em, -1.05em);
+    box-shadow: -10px 0px 90px crimson;
+}
+
+.heart-button:hover button p {
+    opacity: 0;
+}
+
+.heart-button button::before, .heart-button button::after {
+    content: '';
+    position: absolute;
+    top:0;
+    height: inherit;
+    width: 50%;
+    background: crimson;
+    transition-duration: 0.6s;
+    z-index: 0;
+}
+
+.heart-button button::before {
+    left: 0;
+    border-radius: 25px 0px 0px 25px;
+}
+
+.heart-button button::after {
+    right: 0;
+    border-radius: 0px 25px 25px 0px;
+}
+
+p {
+    color: aliceblue;
+}

@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: #0b1522;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div p {
+    color: azure;
+    font: 500 1.5em 'Caveat', cursive;
+}
+
+#container {
+    text-align: center;
+    justify-content: center;
+}
+
+#dhea {
+    width: 80vw;
+    height: 50vh;
+    stroke-dasharray: 470;
+    animation: 2.5s fillSvg ease-in-out;
+}
+
+@keyframes fillSvg {
+    0% {
+        stroke-dashoffset: 470;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    margin-right: 5vw;
+    margin-left: 5vw;
+    background-color: #349150;
+    width: 10em;
+    height: 5em;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px #349150;
+    transition-duration: 0.6s;
+}
+
+button:hover {
+    box-shadow: 0px 0px 25px #349150;
+    width: 15em;
+}
